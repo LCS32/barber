@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --purple-color: #6c60a3;
+    --green-color: #95c742;
+    --pink-color: #b989b3;
+    --grey-color: #2a2828;
+    --light-grey-color: #d1d3d5;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* outline: 1px solid red; */
+}
+
+body {
+    background: var(--grey-color);
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+.color-morado {
+    color: var(--pink-color);
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    overflow: hidden;
+}
+
+.nav-logo h2 {
+    font-size: 2rem;
+    color: var(--green-color);
+    white-space: nowrap;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    z-index: 1;
+    background: var(--grey-color);
+}
+
+.nav-enlaces {
+    display: flex;
+}
+
+.nav-enlaces a {
+    padding: 5px 10px;
+    margin-left: 15px;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--purple-color);
+    cursor: pointer;
+    /* background-color: #b989b3; */
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: solid 2px var(--purple-color);
+    white-space: nowrap;
+
+}
+
+.nav-enlaces a:hover {
+    color: var(--green-color);
+    border: solid 2px var(--pink-color);
+}
+
+.inicio {
+    margin-top: 70px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation-name: fade-in;
+    animation-duration: 5s;
+}
+
+.inicio-texto{
+    color: var(--light-grey-color);
+    padding: 20px 50px;
+}
+
+.inicio-texto h1 {
+    font-size: 2rem;
+}
+
+.inicio-texto p {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+
+.inicio-img {
+    padding: 30px;
+    -webkit-animation: bounce 3s infinite ease-in-out;
+    -o-animation: bounce 3s infinite ease-in-out;
+    -ms-animation: bounce 3s infinite ease-in-out; 
+    -moz-animation: bounce 3s infinite ease-in-out; 
+    animation: bounce 3s infinite ease-in-out;
+    
+    
+    
+}
+
+.icons {
+    text-align: center;
+    color: var(--green-color);
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: var(--purple-color);
+}
+
+.img {
+    max-height: 600px;
+    filter: drop-shadow(5px 5px 25px var(--purple-color));
+    -webkit-filter: drop-shadow(5px 5px 25px var(--purple-color));
+}
+
+.sobre-nosotros {
+    background: linear-gradient( var(--grey-color), var(--purple-color) );
+    overflow: hidden;
+}
+
+.nosotros {
+    display: flex;
+    padding-top: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trabajos {
+    padding-top: 70px;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient( var(--purple-color), var(--pink-color) )
+}
+
+.trabajos-titulo {
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.trabajo {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(250px);
+    gap: 1em;
+}
+
+.foto-trabajo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .1) ;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.servicios {
+    padding-top: 130px;
+    background: linear-gradient( var(--pink-color), var(--green-color) );
+    overflow: hidden;
+    
+}
+
+.contacto {
+    background: linear-gradient( var(--green-color), var(--grey-color) )
+}
+
+.cards {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3em;
+    margin: 0 auto;
+    grid-template-rows: auto;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 0px 15px rgba(0, 0, 0, .3); */
+    width: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    gap: 0px;
+    padding: 10px 20px;
+}
+
+.card-title {
+    padding: 5px 0px;
+    border-bottom: 1px solid black;
+}
+
+.card-title h3 {
+    font-size: 2rem;
+}
+.card-img {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.card-img img{
+    width: 200px;
+    height: 200px;;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.card-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.contacto {
+    text-align: center;
+    padding-top: 130px ;
+    height: 100vh;
+}
+
+.contacto-titulo h2 {
+    font-size: 2.5rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: var(--grey-color);
+    color: var(--light-grey-color);
+    font-weight: 100;
+}
+
+
+/* KEY FRAMES BOUNCING LOGO */
+@-webkit-keyframes bounce {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(-5px)  }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(-5px) }
+}
+
+
+
+@keyframes fade-in {
+    from { 
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+  /* END OF KEY FRAMES */
+
+
+  @media screen and (max-width: 768px) {
+
+    .nav-logo  {
+        display:none;
+    }
+
+    .img {
+        max-height: 500px;
+    }
+    .inicio {
+        margin-top: 115px;
+        flex-direction: column-reverse;
+    }
+
+    .inicio-img {
+        order: 3;
+    }
+
+    .nosotros {
+        flex-direction: column;
+    }
+
+    .icons {
+        padding-top: 30px;
+        flex-direction: row;
+    }
+
+    .nosotros {
+        flex-direction: column-reverse;
+    }
+}
