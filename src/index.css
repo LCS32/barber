@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
     --purple-color: #6c60a3;
@@ -18,9 +18,8 @@
 }
 
 body {
-    background: var(--grey-color);
-    font-family: 'Nunito', sans-serif;
-    
+    background: var(--light-grey-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 .color-morado {
@@ -30,13 +29,20 @@ body {
 .container {
     margin: 0 auto;
     width: 80%;
-    overflow: hidden;
+    
 }
 
 .nav-logo h2 {
     font-size: 2rem;
     color: var(--green-color);
     white-space: nowrap;
+    background: #2a2828;
+    padding: 5px 20px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 .nav-bar {
@@ -49,7 +55,8 @@ body {
     justify-content: space-around;
     align-items: center;  
     z-index: 1;
-    background: var(--grey-color);
+    background: var(--light-grey-color);
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px; */
 }
 
 .nav-enlaces {
@@ -62,42 +69,50 @@ body {
     font-size: 1em;
     text-decoration: none;
     font-weight: 700;
-    color: var(--purple-color);
+    color: var(--pink-color);
     cursor: pointer;
-    /* background-color: #b989b3; */
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-    border: solid 2px var(--purple-color);
+    /*background-color: #b989b3;
+    */border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: solid 2px var(--grey-color);
+    background: #2a2828;
     white-space: nowrap;
-
 }
 
 .nav-enlaces a:hover {
     color: var(--green-color);
-    border: solid 2px var(--pink-color);
 }
 
 .inicio {
     margin-top: 70px;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: calc(100vh - 70px);
+   
     animation-name: fade-in;
     animation-duration: 5s;
+    display: flex;
+}
+
+.inicio__grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
 
 .inicio-texto{
-    color: var(--light-grey-color);
+    grid-column: 1/5;
+    grid-row: 2/-2;
+    color: var(--grey-color);
     padding: 20px 50px;
 }
 
+
 .inicio-texto h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .inicio-texto p {
@@ -107,23 +122,31 @@ body {
 
 
 .inicio-img {
-    padding: 30px;
+    grid-column: 5/-1;
+    grid-row: 1/-1;
+    align-self: center;
+    justify-self: center;
     -webkit-animation: bounce 3s infinite ease-in-out;
     -o-animation: bounce 3s infinite ease-in-out;
     -ms-animation: bounce 3s infinite ease-in-out; 
     -moz-animation: bounce 3s infinite ease-in-out; 
     animation: bounce 3s infinite ease-in-out;
-    
-    
-    
+}
+
+.inicio__pic{
+    width: 100%;
 }
 
 .icons {
+    grid-column: 1/5;
+    grid-row: 4/6;
+    align-self: center;
+    justify-self: center;
     text-align: center;
-    color: var(--green-color);
+    color: var(--purple-color);
     font-size: 2.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
 }
 
@@ -136,14 +159,19 @@ body {
 }
 
 .img {
+    width: 100%;
     max-height: 600px;
     filter: drop-shadow(5px 5px 25px var(--purple-color));
     -webkit-filter: drop-shadow(5px 5px 25px var(--purple-color));
 }
 
 .sobre-nosotros {
-    background: linear-gradient( var(--grey-color), var(--purple-color) );
+    background: var(--grey-color);
     overflow: hidden;
+}
+
+.inicio-texto-mod {
+    color: var(--light-grey-color);
 }
 
 .nosotros {
@@ -157,7 +185,6 @@ body {
     padding-top: 70px;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient( var(--purple-color), var(--pink-color) )
 }
 
 .trabajos-titulo {
@@ -189,14 +216,16 @@ body {
 }
 
 .servicios {
-    padding-top: 130px;
-    background: linear-gradient( var(--pink-color), var(--green-color) );
+    margin-top: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     overflow: hidden;
+    background: var(--grey-color);
     
 }
 
 .contacto {
-    background: linear-gradient( var(--green-color), var(--grey-color) )
+   
 }
 
 .cards {
@@ -223,6 +252,7 @@ body {
     -o-border-radius: 15px;
     gap: 0px;
     padding: 10px 20px;
+    border: 2px solid var(--green-color);
 }
 
 .card-title {
